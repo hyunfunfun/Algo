@@ -62,11 +62,30 @@ def shell_sort(arr):
         
   print(f'after : {arr}')
 
+
+def merge_sort(arr):
+  print('-' * 60)
+  print('Merge Sort')
+  print(f'before: {arr}')
+
+
+
+  print(f'after : {arr}')
+
+def heap_sort(arr):
+  print('-' * 60)
+  print('Heap Sort')
+  print(f'before: {arr}')
+
+
+  print(f'after : {arr}')
+
 def main():
   bubble_sort(array[:])
   insert_sort(array[:])
   select_sort(array[:])
   shell_sort(array[:])
+  merge_sort(array[:])
 
 if __name__ == '__main__':
   main()
