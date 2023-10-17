@@ -9,15 +9,15 @@ print(array, l_arr)
 def merge(start,mid,end):
     merged=[]
     l,r=start,mid+1
-    while l<= mid and r<=end:
-        if array[l]<=array[r]:
-            merged.append(array[l])
+    while l<= mid and r<=end: #A반에 선수있따 and B반에 선수있다
+        if array[l]<=array[r]: #싸움붙여서 A반 선수가 지거나 비기면
+            merged.append(array[l]) #A반 선수 줄서있어
             l +=1
         else:
-            merged.append(array[r])
+            merged.append(array[r])#B반 선수 줄서있어
             r+=1
     if l<=mid:
-        merged+=array[l:mid+1] #남아있는 값 merged로
+        merged+=array[l:mid+1] #남아있는 A반 merged로
         array[start:end+1]=merged
     else:
         array[start:r] = merged
